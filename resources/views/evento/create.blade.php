@@ -38,9 +38,14 @@
                         <textarea type="text" class="form-control" name="descripcion"></textarea>
                     </div>
                 </div>
-                <div>
-                    <input type="text" class="form-control" name="user" hidden="false" disabled="true" value="{{Auth::user()->name}}">
+       
+                    
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="user" hidden="true" value="{{Auth::user()->name}}">
+                    </div>
                 </div>
+              
                 <div class="form-group row">
                     <div class="col-md-12">
                         <p><strong>Imagen</strong></p>

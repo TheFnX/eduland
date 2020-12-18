@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Evento;
 use Illuminate\Http\Request;
+use App\Categoria;
 use File;
 use DB;
 use Image;
 use Session;
-use App\Categoria;
 
 class EventoController extends Controller
 {
@@ -47,20 +47,20 @@ class EventoController extends Controller
     {
         $imagen = null;
         $mensaje= 'Vehiculo Registrado correctamente'; 
-             
+    //    dd($request); 
         $request->validate([
             'nombre' => 'required',
             'direccion' => 'required',
             'imagen' => 'nullable|image',
             'descripcion' => 'nullable',
             'estado' => 'required',            
-            'user_id' => 'required',
-            'categoria_id' => 'required',
+            'categoria_id' => 'nullable',
+            'user' => 'nullable',
         ]);
 
         DB::beginTransaction();
         $requestData = $request->all();
-        dd($requestData);  
+        // dd($requestData);  
 
         if($request->imagen){
            

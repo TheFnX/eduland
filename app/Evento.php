@@ -24,7 +24,7 @@ class Evento extends Model
                         'imagen', 
                         'estado',                        
                         'categoria_id',
-                        'user_id'                       
+                        'user',                      
                         ];
 
     public function categoria(){

@@ -27,24 +27,12 @@ class CreateEventosTable extends Migration
             $table->string('trainer3')->nullable();
             $table->string('precio')->nullable();
             $table->string('contenido',1000);
-
-
-
-
             
             $table->enum('estado', ['aceptado', 'rechazado', 'pendiente'])->nullable();
-
-            $table->unsignedBigInteger('user_id')->unsigned();
-            $table->foreign('user_id')
-            ->references('id')->on('users')
-            ->onDelete('cascade');
-
             $table->unsignedBigInteger('categoria_id')->unsigned();
             $table->foreign('categoria_id')
             ->references('id')->on('categorias')
             ->onDelete('cascade');
-
-
 
             $table->softDeletes();
             $table->timestamps();
