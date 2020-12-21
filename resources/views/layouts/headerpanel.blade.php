@@ -113,13 +113,11 @@
 <!-- /.navbar -->
 
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary " style="top: -30px !important;">
     <!-- Brand Logo -->
     <a href="/" class="pt-3">
         <img src="/images/AdminVentas.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="display: block;opacity: .8;width: 64%;margin: auto;">
-
-
         {{-- <span class="brand-text font-weight-light"></span> --}}
     </a>
 

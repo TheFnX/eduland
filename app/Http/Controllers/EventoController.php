@@ -46,17 +46,27 @@ class EventoController extends Controller
     public function store(Request $request)
     {
         $imagen = null;
-        $mensaje= 'Vehiculo Registrado correctamente'; 
-    //    dd($request); 
+        $mensaje= 'Evento Registrado correctamente'; 
+        //dd($request); 
+
         $request->validate([
             'nombre' => 'required',
             'direccion' => 'required',
+            'duracion' => 'nullable',
+            'fecha' => 'nullable',
+            'hora_inicio' => 'nullable',
+            'trainer1' => 'nullable',
+            'trainer2' => 'nullable',
+            'trainer3' => 'nullable',
+            'precio' => 'nullable',
+            'contenido' => 'nullable',
             'imagen' => 'nullable|image',
             'descripcion' => 'nullable',
             'estado' => 'required',            
             'categoria_id' => 'nullable',
             'user' => 'nullable',
         ]);
+
 
         DB::beginTransaction();
         $requestData = $request->all();
@@ -68,10 +78,10 @@ class EventoController extends Controller
             
             $file = file_get_contents($request->imagen);
             $info = $data->getClientOriginalExtension(); 
-            $extension = explode('images/evento', mime_content_type('images/evento'))[0];
+            $extension = explode('images/eventos', mime_content_type('images/eventos'))[0];
             $image = Image::make($file);
             $fileName = rand(0,10)."-".date('his')."-".rand(0,10).".".$info; 
-            $path  = 'images/evento';
+            $path  = 'images/eventos';
             if (!file_exists($path)) {
                 mkdir($path, 0777, true);
             }
@@ -93,7 +103,7 @@ class EventoController extends Controller
         }
 
         Session::flash('message',$mensaje);
-            return redirect()->route('evento.index'); 
+            return redirect()->route('evento.create'); 
     
     }
 

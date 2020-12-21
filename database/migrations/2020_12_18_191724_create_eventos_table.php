@@ -19,21 +19,19 @@ class CreateEventosTable extends Migration
             $table->string('direccion');
             $table->string('imagen')->nullable();
             $table->string('descripcion', 1000)->nullable();
-            $table->date('fecha')->nullable();
-            $table->string('Hora_inicio');
+            $table->date('fecha');
+            $table->string('hora_inicio');
             $table->string('duracion')->nullable();
             $table->string('trainer1')->nullable();
             $table->string('trainer2')->nullable();
             $table->string('trainer3')->nullable();
             $table->string('precio')->nullable();
+            $table->string('user')->nullable();
             $table->string('contenido',1000);
-            
             $table->enum('estado', ['aceptado', 'rechazado', 'pendiente'])->nullable();
-            $table->unsignedBigInteger('categoria_id')->unsigned();
-            $table->foreign('categoria_id')
-            ->references('id')->on('categorias')
-            ->onDelete('cascade');
-
+            $table->unsignedBigInteger('categorias_id')->unsigned();
+            $table->foreign('categorias_id')
+            ->references('id')->on('categorias')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
 

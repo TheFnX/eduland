@@ -20,15 +20,23 @@ class Evento extends Model
     
     protected $fillable = ['nombre',
                         'direccion',
+                        'duracion',
+                        'fecha',
+                        'hora_inicio',
+                        'trainer1',
+                        'trainer2',
+                        'trainer3',
+                        'precio',
                         'descripcion',
                         'imagen', 
-                        'estado',                        
+                        'estado',  
+                        'contenido',                      
                         'categoria_id',
                         'user',                      
                         ];
 
     public function categoria(){
-        return $this->hasOne(Categoria::class, 'id', 'categoria_id');
+        return $this->hasOne(Categoria::class, 'id');
     }
 
 }
