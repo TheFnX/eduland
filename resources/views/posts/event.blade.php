@@ -45,7 +45,9 @@
                                     <p>{{ \Carbon\Carbon::parse($post->date)->format('d')}}<span>{{ \Carbon\Carbon::parse($post->date)->format('M')}}</span></p>           
                                  </div>
                                 <div class="event-content">
-                                    <h3 class="event-title"><a href="event-single.html">{{$post->name}}</a></h3>
+                                    <h3 class="event-title"><a href="{{route('posts.show', $post)}}">
+                                        {{$post->name}}
+                                    </a></h3>
                                     <p>{!!$post->extract!!}</p>   
                                                                     
                                 </div>

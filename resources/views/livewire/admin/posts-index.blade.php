@@ -18,17 +18,7 @@
                     @foreach ($posts as $post)
                         <tr>
                             <td>{{$post->id}}</td>
-                            <td>{{$post->name}}</td>
-                            {{-- <td with="10px">
-                                <a class="btn btn-primary btn-sm float-right" href="{{route('admin.posts.edit', $post)}}">Editar</a>
-                            </td>
-                            <td with="10px">
-                                <form action="{{route('admin.posts.destroy', $post)}}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn-danger btn-sm float-right" type="submit">Eliminar</button>
-                                </form>
-                            </td> --}}
+                            <td>{{$post->name}}</td>                           
                             <td width="10px">
                                 <a class="btn btn-primary btn-sm float-right" href="{{route('admin.posts.edit', $post)}}">Editar</a>
                             </td>

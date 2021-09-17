@@ -2,6 +2,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+    <a class="btn btn-success btn-sm float-right" href="{{route('admin.tags.create')}}">Nueva etiqueta</a>
     <h1>Editar etiqueta</h1>
 @stop
 

@@ -2,6 +2,9 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+    @can('admin.categories.create')
+    <a class="btn btn-success btn-sm float-right"  href="{{route('admin.categories.create')}}">Nueva categoría</a>
+    @endcan
     <h1>Editar Categoría</h1>
 @stop
 

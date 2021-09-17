@@ -35,17 +35,29 @@
                 @endif
             </figure>                
           </div>
+          
           <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Panel</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Información</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Contenidos</a>
+            </li> 
+          </ul>
+          {{-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Información</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Contenidos</a>
             </li>              
             <li class="nav-item">
-              <a class="nav-link active" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comentarios</a>
+              <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comentarios</a>
             </li>
-          </ul>
+          </ul> --}}
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
               <div class="objctive_text">
@@ -58,7 +70,7 @@
               </div>
             </div>            
           </div>
-        </div>
+        </div>        
         <div class="col-lg-4">
           <div class="c_details_list">
             <ul class="list">

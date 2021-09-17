@@ -43,16 +43,20 @@
                     {{ __('Log in') }}
                 </x-jet-button>
             </div>
-            <div class="flex items-center justify-end mt-4">
-                <a class="ml-1 btn btn-primary" href="{{ url('auth/facebook') }}" style="margin-top: 0px !important;background: blue;color: #ffffff;padding: 5px;border-radius:7px;" id="btn-fblogin">
-                    <i class="fa fa-facebook-square" aria-hidden="true"></i> Login with Facebook
-                </a>
-            </div>
-            <div class="flex items-center justify-end mt-4">
-                <a href="{{ url('auth/google') }}">
-                    <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png" style="margin-left: 3em;">
-                </a>
-            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="flex items-center justify-start mt-4">
+                        <a class="ml-1 btn btn-primary" href="{{ url('auth/facebook') }}" style="margin-top: 0px !important;background: rgb(80, 80, 231);color: #ffffff;padding: 5px;border-radius:7px;" id="btn-fblogin">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+                    </div>
+                </div>
+                <div class="col-sm-6">              
+                    <div class="flex items-center justify-end mt-4">
+                        <a class="ml-1 btn btn-success" href="{{ url('auth/google') }}" style="margin-top: 0px !important;background: rgb(240, 39, 39);color: #ffffff;padding: 5px;border-radius:7px;" id="btn-gglogin">
+                            <i class="fa fa-google" aria-hidden="true"></i> Google</a>
+                    </div>
+                </div>
+            </div>            
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
