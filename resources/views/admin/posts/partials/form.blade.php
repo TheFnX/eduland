@@ -1,24 +1,45 @@
-<div class="form-group">
-    {!! Form::label('name', 'Nombre:') !!}
-    {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre del evento']) !!}
-    @error('name')
-        <small class="text-danger">{{$message}}</small>
-    @enderror
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            {!! Form::label('name', 'Nombre:') !!}
+            {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre del evento']) !!}
+            @error('name')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            {!! Form::label('slug', 'Slug:') !!}
+            {!! Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el slug del evento', 'readonly'])
+            !!}
+            @error('slug')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
+        </div>
+    </div>
 </div>
-<div class="form-group">
-    {!! Form::label('slug', 'Slug:') !!}
-    {!! Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el slug del evento', 'readonly'])
-    !!}
-    @error('slug')
-        <small class="text-danger">{{$message}}</small>
-    @enderror
-</div>
-<div class="form-group">
-    {!! Form::label('category_id', 'Categoría') !!}
-    {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
-    @error('category_id')
-        <small class="text-danger">{{$message}}</small>
-    @enderror
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            {!! Form::label('category_id', 'Categoría') !!}
+            {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
+            @error('category_id')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
+        </div>
+    </div>
+    <div class="col-sm-6">    
+        <div class="form-group">
+            {!! Form::label('modality', 'Modalidad:') !!}
+            {!! Form::select('modality', ['Virtual','Presencial'], null, ['class' => 'form-control', 'placeholder' => 'Selecionar']) !!}
+            @error('modality')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
+        </div>
+    </div>
 </div>
 <div class="form-group">
     <p class="font-weight-bold">Etiquetas</p>
@@ -33,32 +54,36 @@
         <small class="text-danger">{{$message}}</small>
     @enderror
 </div>
-<div class="form-group">
-    {!! Form::label('modality', 'Modalidad:') !!}
-    {!! Form::select('modality', ['Virtual','Presencial'], null, ['placeholder' => 'Selecionar']) !!}
-    @error('modality')
-        <small class="text-danger">{{$message}}</small>
-    @enderror
-</div><div class="form-group">
-    {!! Form::label('price', 'Precio:') !!}
-    {!! Form::number('price', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el precio del evento']) !!}
-    @error('price')
-        <small class="text-danger">{{$message}}</small>
-    @enderror
+<div class="row"> 
+    <div class="col-sm-6">  
+        <div class="form-group">
+            {!! Form::label('price', 'Precio:') !!}
+            {!! Form::number('price', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el precio del evento', 'min=0' ]) !!}
+            @error('price')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
+        </div>
+    </div>
 </div>
-<div class="form-group">
-    {!! Form::label('time', 'Hora:') !!}
-    {!! Form::time('time', \Carbon\Carbon::now(), ['class' => 'form-control', 'placeholder' => 'Ingrese la hora del evento']) !!}
-    @error('date')
-        <small class="text-danger">{{$message}}</small>
-    @enderror
-</div>
-<div class="form-group">
-    {!! Form::label('date', 'Fecha:') !!}
-    {!! Form::date('date', \Carbon\Carbon::now(), ['class' => 'form-control', 'placeholder' => 'Ingrese la fecha del evento']) !!}
-    @error('date')
-        <small class="text-danger">{{$message}}</small>
-    @enderror
+<div class="row"> 
+    <div class="col-sm-6">
+        <div class="form-group">
+            {!! Form::label('time', 'Hora:') !!}
+            {!! Form::time('time', \Carbon\Carbon::now(), ['class' => 'form-control', 'placeholder' => 'Ingrese la hora del evento']) !!}
+            @error('date')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            {!! Form::label('date', 'Fecha:') !!}
+            {!! Form::date('date', \Carbon\Carbon::now(), ['class' => 'form-control', 'placeholder' => 'Ingrese la fecha del evento']) !!}
+            @error('date')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
+        </div>
+    </div>
 </div>
 <div class="form-group">
     <p class="font-weight-bold">Estado</p>
@@ -93,27 +118,26 @@
                 @error('file')
                     <span class="text-danger">{{$message}}</span>
                 @enderror
-            </div>
-
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ratione nesciunt suscipit fugit sint
-                cupiditate quisquam delectus animi vel blanditiis modi officia accusamus quia voluptatibus id cumque dolor,
-                facere culpa.</p>
+            </div>           
         </div>
     </div>
-
-<div class="form-group">
-    {!! Form::label('extract', 'Extracto:') !!}
-    {!! Form::textarea('extract', null, ['class' => 'form-control']) !!}
-    @error('extract')
-        <small class="text-danger">{{$message}}</small>
-    @enderror
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            {!! Form::label('extract', 'Descripción:') !!}
+            {!! Form::textarea('extract', null, ['class' => 'form-control', 'placeholder' => 'Ingrese una descripción del Evento']) !!}
+            @error('extract')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            {!! Form::label('body', 'Contenidos:') !!}
+            {!! Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el índice de contenidos']) !!}
+            @error('body')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
+        </div>
+    </div>
 </div>
-<div class="form-group">
-    {!! Form::label('body', 'Cuerpo del post:') !!}
-    {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
-    @error('body')
-        <small class="text-danger">{{$message}}</small>
-    @enderror
-</div>
-
-

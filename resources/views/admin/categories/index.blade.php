@@ -4,7 +4,7 @@
 @section('content_header')
 
     @can('admin.categories.create')
-        <a class="btn btn-secondary btn-sm float-right"  href="{{route('admin.categories.create')}}">Agregar categoría</a>
+        <a class="btn btn-success btn-sm float-right"  href="{{route('admin.categories.create')}}">Nueva categoría</a>
     @endcan
     <h1>Lista de Categorias</h1>
 @stop
@@ -21,7 +21,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>NOMBRE</th>
                         <th colspan="2"></th>
                     </tr>
                 </thead>

@@ -65,15 +65,15 @@
         <div class="w-full">
           <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
             <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
-              <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-white bg-teal-600" onclick="changeAtiveTab(event,'tab-profile')">
+              <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-teal-600 bg-white" onclick="changeAtiveTab(event,'tab-profile')">
                 <i class="fa fa-user text-base mr-1"></i>  Perfil
               </a>
             </li>
             <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-teal-600 bg-white" onclick="changeAtiveTab(event,'tab-password')">
-                <i class="fa fa-key mr-1"></i>  Contraseña
+                <i class="fa fa-key text-base mr-1"></i>  Contraseña
               </a>
-            </li>
+            </li>           
             <li class="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a class="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal text-teal-600 bg-white" onclick="changeAtiveTab(event,'tab-authentication')">
                 <i class="fa fa-unlock-alt text-base mr-1"></i>  Autenticación

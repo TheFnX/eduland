@@ -25,7 +25,7 @@
                                     <td>{{$role->name}}</td>
                                 @endforeach 
                                 <td width="10px" class="float-righ">                                
-                                    <a class="btn btn-primary" href="{{route('admin.users.edit', $user)}}">Editar</a>
+                                    <a class="btn btn-primary float-right" href="{{route('admin.users.edit', $user)}}">Editar</a>
                                 </td> 
                             </tr>                                  
                         @endforeach   

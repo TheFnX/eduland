@@ -46,7 +46,8 @@
                                  </div>
                                 <div class="event-content">
                                     <h3 class="event-title"><a href="event-single.html">{{$post->name}}</a></h3>
-                                    <p>{{$post->extract}}</p>                                   
+                                    <p>{!!$post->extract!!}</p>   
+                                                                    
                                 </div>
                                 <div class="course-meta">							
                                     <!-- Course Info -->								

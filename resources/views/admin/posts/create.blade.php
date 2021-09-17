@@ -2,7 +2,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Crear nuevo post</h1>
+    <h1>Nuevo Evento</h1>
 @stop
 
 @section('content')
